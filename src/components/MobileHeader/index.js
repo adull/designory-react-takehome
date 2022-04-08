@@ -1,4 +1,4 @@
-import logo, { ReactComponent as Logo } from 'assets/logo.svg';
+import { ReactComponent as Logo } from 'assets/logo.svg';
 import { useState } from 'react';
 import useWindowSize from 'hooks/useWindowSize';
 import Headroom from 'react-headroom';
@@ -9,7 +9,7 @@ export default function MobileHeader(props) {
   const [isOpen, setIsOpen] = useState(false);
   const [fixedStyle, setFixedStyle] = useState(null)
   const [isDisabled, setIsDisabled] = useState(false)
-  const [width, height] = useWindowSize();
+  const [width] = useWindowSize();
   
   const clickMenuLink = (e) => {
     e.preventDefault();
