@@ -1,0 +1,39 @@
+@import 'styles/global/variables';
+
+.fiftyFifty {
+  @media (min-width: $bp-md) {
+    height: 435px;
+    align-content: space-between;
+    margin-bottom: 70px;
+  }
+  
+
+  .block {
+    width: auto;
+    > * {
+      margin-bottom: 20px;
+      @media (min-width: $bp-md) {
+        margin-bottom: 0;
+      }
+    }
+    h2 {
+      font-size: $font-big;
+      margin-top: 0px;
+      margin-bottom: 10px !important;
+    }
+    h3 {
+      font-size: $font-regular;
+      margin-top: 0px;
+      margin-bottom: 20px !important;
+    }
+    @media (min-width: $bp-md) {
+      width: calc(50% - 45px);
+      margin-bottom: 0px;
+    }
+  }
+
+  .buttonMarginTop {
+    margin-top: 30px;
+  }
+}
+

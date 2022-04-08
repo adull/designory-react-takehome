@@ -1,0 +1,25 @@
+@import 'styles/global/variables';
+
+.hero {
+  height: 66vh;
+  background-color: $light-grey;
+  border-bottom: 2px solid #AAAAAA;
+  .heroContent {
+    margin: 0 2.9rem;
+    padding: 98px 0 0;
+    @media (min-width: $bp-md) {
+      margin: 0 9.2em auto;
+      width: 680px;
+    }
+
+    .greeting {
+      font-weight: $font-bold;
+      font-size: $font-big;
+    }
+    .message {
+      font-weight: $font-bold;
+      font-size: $font-jumbo;
+      margin: 0 0 22px;
+    }
+  }
+}

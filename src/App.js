@@ -1,39 +1,31 @@
-// @see https://create-react-app.dev/docs/adding-images-fonts-and-files/#adding-svgs
-import logo, { ReactComponent as Logo } from './logo.svg';
+// components
+import Header from 'components/Header';
+// commented out for now - uncomemnt to add back in to the project.
+import MobileHeader from 'components/MobileHeader';
+import Hero from 'components/Hero';
+import Articles from 'components/Articles';
+import FiftyFifty from 'components/FiftyFifty';
+import Footer from 'components/Footer'
 
-import './App.scss';
+// data
+import { headerData, heroData, articlesData, bodyData, footerData } from './data'
+
+// styles
+import 'styles/global/global.scss';
 
 function App() {
+	// normal header - 
+	// <Header links={ headerData.links } />
+
+	// header with hamburger ux - 
+	// <MobileHeader links={ headerData.links } />
 	return (
 		<div className="app">
-			<Logo />
-			{/* Or, import the SVG and use it as an image: <img src={logo} alt="Logo" /> */}
-			<p>
-				<strong>Please create your webpage here.</strong>
-			</p>
-			<p>
-				Feel free to delete all existing JS or (S)CSS files and start from scratch, all of
-				these are placeholder elements. You may split out separate components into separate
-				files, or you can organize multiple components within a single file. Try to do what
-				you find comfortable.
-			</p>
-			<p>
-				In addition, please to use whatever styling methods you are familiar with, including:
-			</p>
-			<ul>
-				<li>
-					CSS-in-JS (<a href="https://styled-components.com/">styled-components</a>,{' '}
-					<a href="https://emotion.sh/">emotion</a>, etc.)
-				</li>
-				<li>
-					<a href="https://sass-lang.com/">Sass</a>
-				</li>
-				<li>
-					<a href="https://create-react-app.dev/docs/adding-a-css-modules-stylesheet/">
-						CSS Modules
-					</a>
-				</li>
-			</ul>
+			<MobileHeader links={ headerData.links } />
+			<Hero data={ heroData } />
+			<Articles articles={ articlesData.articles } />
+			<FiftyFifty data={ bodyData.fiftyFifty } />
+			<Footer data={ footerData } />
 		</div>
 	);
 }

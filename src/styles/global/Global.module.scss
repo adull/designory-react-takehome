@@ -1,0 +1,70 @@
+@import 'styles/global/variables';
+
+.container {
+  margin: 0 1.9rem;
+  @media (min-width: $bp-md) {
+    margin: 0 2.9rem;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.flexWrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justifySpaceBetweenAlignCenter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.desktopColumn {
+  flex-direction: auto;
+  @media (min-width: $bp-md) {
+    flex-direction: column !important;
+  }
+}
+
+.desktopRow {
+  flex-direction: auto;
+  @media (min-width: $bp-md) {
+    flex-direction: row !important;
+  }
+}
+
+.mobileColumn {
+  flex-direction: column !important;
+  @media (min-width: $bp-md) {
+    flex-direction: auto
+  }
+}
+
+.mobileRow {
+  flex-direction: row !important;
+  @media (min-width: $bp-md) {
+    flex-direction: auto
+  }
+}
+
+.link {
+  &:after {
+    content: "";
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: transparent;
+    bottom: -10px;
+    left: 0;
+    transition: 0.15s ease-out;
+  }
+  &:hover, &:focus {
+    &:after {
+      background-color: $dark-grey;
+        bottom: -5px;
+    } 
+  }
+}

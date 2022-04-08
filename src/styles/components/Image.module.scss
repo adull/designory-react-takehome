@@ -1,0 +1,29 @@
+@import 'styles/global/variables';
+
+// .image {
+//   height: 100%;
+//   width: 100%;
+//   // padding: 8px;
+//   padding:18px;
+//   border: 1px solid $grey;
+//   @media (min-width: $bp-md) {
+//     width: 50%;
+//     height: 100%;
+//   }
+// }
+
+.imageWrapper {
+  width: auto;
+  height: 100px;
+  padding:15px;
+  border: 1px solid $grey;
+  margin-bottom: 15px;
+  @media (min-width: $bp-md) {
+    height: 100%;
+  }
+  .image {
+    height: 100%;
+    width: 100%;
+  }
+
+}

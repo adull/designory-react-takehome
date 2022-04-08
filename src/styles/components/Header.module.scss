@@ -1,0 +1,119 @@
+@import 'styles/global/variables';
+
+.header {
+  padding: 28px 0;
+  border-bottom: 3px solid $black;
+  background-color: $white;
+  .hamburgerWrapper {
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    &.hamburgerOpen {
+      .hamburgerLine {
+        &:first-of-type {
+          transform: rotate(45deg);
+          top: 6px;
+        }
+        &:nth-of-type(2) {
+          transform: rotate(-45deg);
+        }
+        &:nth-of-type(3) {
+          top: 15px;
+          background-color: white;
+        }
+      }
+    }
+    .hamburgerLine {
+      width: 30px;
+      height: 3px;
+      margin-bottom: 3px;
+      background-color: $black;
+      position: relative;
+      transition: 0.3s ease-in-out;
+      &:nth-of-type(3) {
+        top: 0;
+        margin-bottom: 0px;
+      }
+    }
+  }
+
+  .smallLinksWrapper {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: $bp-sm) {
+      flex-direction: row;
+      align-items: center;
+      justify-content: flex-end;
+
+    }
+    .smallLinks {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      @media (min-width: $bp-sm) {
+        justify-content: flex-end;
+        flex-wrap: nowrap;
+      }
+      .smallLink {
+        font-size: $font-xsm;
+        color: $dark-grey;
+        margin-right: 15px;
+        margin-top: 15px;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-weight: $font-light;
+        letter-spacing: 1px;
+        position: relative;
+        &:last-of-type {
+          margin-right: 0;
+        }
+        @media (min-width: $bp-md) {
+          font-size: $font-sm;
+          margin-top: 0;
+          margin-left: 15px;
+        }
+        @media(min-width: $bp-sm) {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  
+  .links {
+    
+    .link {
+      font-size: $font-sm;
+      color: $dark-grey;
+      margin-left: 50px;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: $font-light;
+      letter-spacing: 1px;
+      position: relative;
+    }
+  }
+  .hamburgerMenu {
+    display: flex;
+    flex-direction: column;
+    
+    .hamburgerLink {
+      padding: 20px 0px;
+      font-size: $font-sm;
+      color: $dark-grey;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: $font-light;
+      letter-spacing: 1px;
+      position: relative;
+      &:last-of-type {
+        padding: 20px 0px 0px;
+      }
+    }
+  }
+}
+
+
+.logo {
+  width: 200px;
+}

@@ -1,0 +1,36 @@
+@import 'styles/global/variables';
+
+.footer {
+  border-top: 3px solid $black;
+  padding-top: 8px;
+  margin-bottom: 40px !important;
+  >div {
+    font-size: $font-sm;
+    display: flex;
+    flex-direction: column;
+    @media (min-width: $bp-md) {
+      flex-direction: row;
+    }
+    a {
+      text-decoration: none;
+      color: $black;
+      position: relative;
+      &:after {
+        content: "";
+        position: absolute;
+        height: 2px;
+        width: 100%;
+        background-color: transparent;
+        bottom: -10px;
+        left: 0;
+        transition: 0.15s ease-out;
+      }
+      &:hover, &:focus{
+        &:after {
+          background-color: $dark-grey;
+        bottom: -5px;
+        } 
+      }
+    }
+  }
+}

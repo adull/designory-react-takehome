@@ -1,0 +1,17 @@
+// global.scss is different from global.module.scss in that this file is loaded at the root of the app to load styles 
+// that get loaded on every page.
+@import 'styles/global/variables';
+
+html, body {
+  font-family: $helvetica;
+}
+
+// have to do it this way because i dont have a build process to strip out the classname and replace with module variable.
+// problem arises because of dangerouslysetinnerhtml.
+// problem with doing it this way is that this css gets loaded regardless of if its used. if the markup changes 
+// this `.body-outline` still gets bundled into the css bundle with CRA.
+.body-outline {
+  color: $white;
+  font-weight: $font-bold;
+  -webkit-text-stroke: 1px $light-grey;
+}

@@ -1,0 +1,17 @@
+@import 'styles/global/variables';
+
+.button {
+  font-size: $font-sm;
+  padding: 13px 2.25em; 
+  border-radius: 5px;
+  border: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  
+  position: relative;
+  transition: 0.3s ease-out;
+  cursor: pointer;
+  &:focus, &:hover {
+    background-color: $dark-grey !important;
+  }
+}
